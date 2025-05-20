@@ -1,10 +1,17 @@
+# Scripts Repository
+
+This repository contains a collection of utility scripts for automating tasks, improving productivity, and simplifying workflows. The scripts are written in Bash, PowerShell, and CMD, with more languages added over time.
+
 ## 🚀 Getting Started
 
 ### Prerequisites
-- A Unix-like operating system (Linux, macOS, etc.).
-- Basic familiarity with the terminal and shell commands.
+- **Bash Scripts**: Unix-like OS (Linux, macOS, WSL) or Windows (with Git Bash/Cygwin).
+- **PowerShell**: Windows PowerShell 5.1+ or PowerShell Core (cross-platform).
+- **CMD**: Windows Command Prompt (for `.bat`/`.cmd` scripts).
 
 ### Installation
+
+#### Bash Scripts
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/pratyush618/scripts.git
@@ -12,55 +19,61 @@
    ```
 
 2. **Install a script**:
-   - Use the automated installer (`install.sh`) for Bash scripts:
+   - Use the automated installer (`install.sh`):
      ```bash
      sudo ./bash/install.sh <script_name> [alias_name] [target_dir]
      ```
-     Example:
-     ```bash
-     sudo ./bash/install.sh my_script my_alias
-     ```
-   - For manual installation, refer to the [INSTALLATION.md](./bash/INSTALLATION.md) guide.
+   - For manual installation, refer to [INSTALLATION.md](./bash/INSTALLATION.md).
 
----
+#### PowerShell Scripts
+1. **Place scripts** in the `powershell/` directory.
+2. **Run scripts**:
+   - From PowerShell:
+     ```powershell
+     .\powershell\<script_name>.ps1
+     ```
+   - For system-wide access, add the `powershell/` directory to your `PATH`.
+
+#### CMD Scripts
+1. **Place scripts** in the `cmd/` directory (for `.bat` or `.cmd` files).
+2. **Run scripts**:
+   - From Command Prompt:
+     ```cmd
+     cmd\<script_name>.bat
+     ```
+   - For system-wide access, add the `cmd/` directory to your `PATH`.
 
 ## 📜 Scripts Overview
 
-| Script Name       | Description                                  | Usage Example                     |
-|-------------------|----------------------------------------------|-----------------------------------|
-| `install.sh`      | Installs other scripts with aliases.         | `sudo ./install.sh my_script`     |
-| (More scripts...) | (Descriptions added as scripts are included) | (Examples added later)            |
-
----
+| Script Name       | Language  | Description                                  | Usage Example                     |
+|-------------------|-----------|----------------------------------------------|-----------------------------------|
+| `install.sh`      | Bash      | Installs other scripts with aliases.         | `sudo ./install.sh my_script`     |
+| (More scripts...) | (Various) | (Descriptions added as scripts are included) | (Examples added later)            |
 
 ## 🛠️ Usage
-- After installation, run scripts directly or via their aliases (if configured).
-- For detailed usage instructions, refer to the script's header or comments.
-
----
+- **Bash**: Run directly or via aliases (e.g., `my_script`).
+- **PowerShell**: Execute with `.\<script_name>.ps1` or add to `PATH`.
+- **CMD**: Run from Command Prompt or add to `PATH`.
 
 ## 📝 Adding New Scripts
-1. **Place the script** in the appropriate directory (e.g., `bash/` for Bash scripts).
+1. **Place the script** in the appropriate directory:
+   - Bash: `bash/`
+   - PowerShell: `powershell/`
+   - CMD: `cmd/`
 2. **Update documentation**:
-   - Add a row to the [Scripts Overview](#-scripts-overview) table in this file.
-   - Include usage instructions in the script's header or a separate `README` if needed.
-
----
+   - Add a row to the [Scripts Overview](#-scripts-overview) table.
+   - Include usage instructions in the script's header or a separate `README`.
 
 ## ❓ Troubleshooting
-- **Permission denied**: Run scripts with `sudo` or ensure they have execute permissions (`chmod +x`).
-- **Command not found**: Verify the script is in your `PATH` or use the full path to run it.
-
-
----
+- **Bash**:
+  - `Permission denied`: Use `sudo` or `chmod +x`.
+  - `Command not found`: Verify `PATH` or use full path.
+- **PowerShell**:
+  - Execution policy: Run `Set-ExecutionPolicy RemoteSigned` (admin mode).
+- **CMD**:
+  - `PATH` issues: Add script directory to `PATH` or use full path.
 
 ## 🙌 Contributing
-Contributions are welcome! If you have a useful script, feel free to:
 1. Fork the repository.
-2. Add your script to the appropriate directory.
+2. Add scripts to the correct directory (`bash/`, `powershell/`, or `cmd/`).
 3. Submit a pull request.
-
----
-
-## 📬 Contact
-For questions or suggestions, open an issue or contact [your-email@example.com](mailto:your-email@example.com).
